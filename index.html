@@ -66,54 +66,58 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-6 temperature">
+          <div class="col-4 temperature">
             <ul>
               <li>
+                <br />
                 <span class="temperHead">Temperature</span>
               </li>
               <li>
-                <br />
-                Precipitation
+                
+                <span class="humid">Humidity</span>
               </li>
-              <li>Wind</li>
+              <li><span class="win">Wind</span></li>
             </ul>
           </div>
 
-          <div class="col-2">
-            <i class="material-symbols-outlined size" >cloudy_filled</i
-            ><span class="description" id="description">Partly cloudy </span>
-          </div>
-
-          <div class="col-4 current">
-            <ul>
+          <div class="col-4">
+           <ul>
               <li>
                 <div>
-                  <span class="temper" id="temper">20</span>
-                  <span class="units">
-                    <a href="#" id="celsius-link">°C</a>|<a
-                      href="#"
-                      id="fahrenheit-link"
-                      >°F</a
-                    ></span
-                  >
+                  <br/>
+                  <br/>
+                <br/>
                 </div>
               </li>
               <li><span class="humidity" id="humidity">2</span> <span class="un">%</span></li>
               <li><span class="wind" id="wind">3</span> <span class="un"> km/h   </span> </li>
             </ul>
+
+
+
+           
+          </div>
+
+          <div class="col-4 current">
+            <div class="clearfix">
+            <i class="material-symbols-outlined size float-right" >cloudy_filled  </i> 
+               <span class="temper" class="float-right" id="temper">20</span>
+                  
+                    <a href="#" class="unit" id="celsius-link">°C|</a><a  href="#" class="unit" id="fahrenheit-link">°F</a>
+                  </div>
+                  
+                  <span class="description" id="description">Partly cloudy </span>
           </div>
           <div class="row">
             <div class="col-6 futur">
               <ul>
                 <li>
                   <span class="temp" id="temp"> 18</span>
-                  <span class="unit">
-                    <a href="#" id="celsius-link">°C</a>|<a
-                      href="#"
+                  <a href="#" class="units" id="celsius-link">°C|</a><a
+                      href="#" class="units" 
                       id="fahrenheit-link"
                       >°F</a
-                    ></span
-                  >
+                    >
                 </li>
                 <li>
                     <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
@@ -133,10 +137,11 @@
               <ul>
                 <li>
                   <span class="temp" id="temp"> 22 </span>
-                  <span class="unit">
-                    <a href="#" id="celsius-link">°C</a>|
-                    <a href="#" id="fahrenheit-link">°F</a></span
-                  >
+                 <a href="#" class="units" id="celsius-link">°C|</a><a
+                      href="#" class="units" 
+                      id="fahrenheit-link"
+                      >°F</a
+                    >
                 </li>
                 <li>
                     <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
@@ -156,13 +161,11 @@
               <ul>
                 <li>
                   <span class="temp" id="temp"> 19 </span>
-                  <span class="unit">
-                    <a href="#" id="celsius-link">°C</a>|<a
-                      href="#"
+                 <a href="#" class="units" id="celsius-link">°C|</a><a
+                      href="#" class="units" 
                       id="fahrenheit-link"
                       >°F</a
-                    ></span
-                  >
+                    >
                 </li>
                 <li>
                     <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
@@ -182,13 +185,12 @@
               <ul>
                 <li>
                   <span class="temp" id="temp"> 18 </span>
-                  <span class="unit">
-                    <a href="#" id="celsius-link">°C</a>|<a
-                      href="#"
+                  
+                    <a href="#" class="units" id="celsius-link">°C|</a><a
+                      href="#" class="units" 
                       id="fahrenheit-link"
                       >°F</a
-                    ></span
-                  >
+                    >
                 </li>
                 <li>
                   <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
@@ -207,14 +209,12 @@
             <div class="col futur">
               <ul>
                 <li>
-                  <span class="temp" id="temp"> 24 </span>
-                  <span class="unit">
-                    <a href="#" id="celsius-link">°C</a>|<a
-                      href="#"
+                  <span class="temp" id="temp"> 24</span>
+                  <a href="#" class="units" id="celsius-link">°C|</a><a
+                      href="#" class="units" 
                       id="fahrenheit-link"
                       >°F</a
-                    ></span
-                  >
+                    >
                 </li>
                 <li>
                     <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
@@ -235,7 +235,7 @@
     <footer>
     
       <p>
-        <a href="https://github.com/leddascar/weather-app" target="_blank" >
+        <a href="https://github.com/leddascar/weather-app" target="_blank" class="opensource">
           Open-source code</a>, by Larysa Sverdlova
       </p>
   </div>
