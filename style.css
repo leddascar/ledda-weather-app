@@ -1,20 +1,8 @@
-h1 {
-  color: white;
-  text-align: center;
-  font-family: "PT Mono", monospace;
-  text-align: center;
-}
-h2 {
-  text-align: right;
-  color: #287ce2;
-  font-family: "PT Mono", monospace;
-  font-size: 25px;
-  font-weight: bolder;
-  margin-right: 20px;
-}
 body {
-  background: #9fc5f3;
+  background: #d1e1f5;
+  font-family: Arial, sans-serif;
 }
+
 ul {
   list-style: none;
 }
@@ -28,12 +16,29 @@ a:hover {
 p {
   margin-left: 250px;
 }
+h1 {
+  list-style: none;
+  color: white;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: -15px;
+}
+h2 {
+  list-style: none;
+
+  color: white;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
 
 .temperature {
   color: #287ce2;
   font-size: 20px;
   font-weight: bolder;
-  font-family: "PT Mono", monospace;
 }
 .humidity {
   font-size: 30px;
@@ -65,15 +70,16 @@ p {
 }
 .image {
   color: white;
-  font-size: 30px;
+  font-size: 45px;
   font-weight: bold;
 }
 .frame {
+  background: #9fc5f3;
   border: 1px solid #287ce2;
-  padding: 15px;
-  margin: 200 px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
   max-width: 800px;
-  border-radius: 10px;
 }
 
 .temp {
@@ -82,10 +88,11 @@ p {
   color: white;
 }
 .temper {
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
   text-align: right;
   color: white;
+  margin-top: 0px;
 }
 .btn {
   box-shadow: 2px 2px 1px #0e4290;
@@ -96,15 +103,9 @@ p {
   font-size: 40px;
 }
 
-.city {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-}
-
 .units {
   position: relative;
-  top: -30px;
+  top: -15px;
   color: #287ce2;
 }
 .unit {

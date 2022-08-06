@@ -38,7 +38,7 @@
     if (hours < 10) {
       hours = `0${hours}`;
     }
-    return ` <br/> ${weekday},${hours}:${minutes} <br/>  ${month} ${dayNum}, ${year}`;
+    return ` <br/> ${weekday}, ${hours}:${minutes} <br/>  ${month} ${dayNum}, ${year}`;
   }
 
   let currentDate = document.querySelector("#time");
