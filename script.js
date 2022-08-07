@@ -1,6 +1,6 @@
 function showTime(timestemp) {
   let date = new Date(timestemp);
-
+  console.log(date);
   let hours = date.getHours();
   let dayNum = date.getDate();
   let year = date.getFullYear();

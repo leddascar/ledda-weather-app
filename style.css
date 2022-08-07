@@ -159,9 +159,11 @@ li:first-letter {
   color: rgb(80, 80, 80);
 }
 .description {
-  text-transform: capitalize;
-  text-align: right;
+  text-align: left;
   color: rgb(33, 33, 33);
   font-size: 20px;
   font-weight: normal;
+}
+.description:first-letter {
+  text-transform: uppercase;
 }
