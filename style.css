@@ -1,6 +1,6 @@
 body {
   background: #d1e1f5;
-  font-family: Arial, sans-serif;
+  font-family: Font Awesome 6 Free;
 }
 
 ul {
@@ -20,7 +20,7 @@ h1 {
   list-style: none;
   text-align: right;
   font-size: 24px;
-  font-weight: 400;
+  text-transform: capitalize;
   line-height: 28px;
   margin-bottom: -15px;
 }
@@ -33,11 +33,17 @@ h2 {
   font-weight: 100;
   line-height: 19px;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
 
+.city {
+  font-weight: bold;
+}
 .temperature {
   color: rgb(33, 33, 33);
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 .humidity {
   font-size: 18px;
@@ -153,6 +159,7 @@ h2 {
   color: rgb(80, 80, 80);
 }
 .description {
+  text-transform: capitalize;
   text-align: right;
   color: rgb(33, 33, 33);
   font-size: 20px;
