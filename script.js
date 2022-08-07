@@ -97,6 +97,20 @@ function showGPSTemperature(response) {
   document.querySelector("#description").innerHTML = message;
 
   document.querySelector("#time").innerHTML = showTime(response.data.dt * 1000);
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "alt",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    );
 }
 let currentCity = "Kyiv";
 showWeather(currentCity);

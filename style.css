@@ -37,6 +37,9 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+img {
+  vertical-align: bottom;
+}
 .city {
   font-weight: bold;
 }
@@ -86,6 +89,7 @@ li:first-letter {
   font-size: 20px;
   font-weight: bold;
 }
+
 .image {
   color: white;
   font-size: 34px;
@@ -111,7 +115,6 @@ li:first-letter {
   text-align: right;
   line-height: 1;
   color: rgb(33, 33, 33);
-  margin-top: 0px;
 }
 .btn {
   box-shadow: 2px 2px 1px #0e4290;
@@ -162,7 +165,7 @@ li:first-letter {
   text-align: left;
   color: rgb(33, 33, 33);
   font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
 }
 .description:first-letter {
   text-transform: uppercase;
