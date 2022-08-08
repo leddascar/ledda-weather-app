@@ -32,6 +32,7 @@ h2 {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+  margin-bottom: 15px;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -94,11 +95,11 @@ img {
   color: white;
   font-size: 34px;
   font-weight: bold;
+  vertical-align: auto;
 }
 .frame {
   background: #9fc5f3;
   border: 1px solid #287ce2;
-  padding: 20px;
   border-radius: 5px;
   text-align: left;
   max-width: 800px;
@@ -112,7 +113,7 @@ img {
 .temper {
   font-size: 64px;
   font-weight: 400;
-  text-align: right;
+  margin-top: 0px;
   line-height: 1;
   color: rgb(33, 33, 33);
 }
@@ -162,10 +163,10 @@ img {
   color: rgb(80, 80, 80);
 }
 .description {
-  text-align: left;
   color: rgb(33, 33, 33);
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 .description:first-letter {
   text-transform: uppercase;
