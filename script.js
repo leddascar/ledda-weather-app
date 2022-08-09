@@ -82,6 +82,8 @@ function showLocation() {
 }
 
 function showGPSTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#temper").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -112,5 +114,25 @@ function showGPSTemperature(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
     );
 }
+
+function displayCelsius(event) {
+  event.preventDefault();
+  document.querySelector("#temper").innerHTML = Math.round(celsiusTemperature);
+}
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  document.querySelector("#temper").innerHTML = Math.round(
+    celsiusTemperature * 1.8 + 32
+  );
+}
+
+let celsiusTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
 let currentCity = "Kyiv";
 showWeather(currentCity);
