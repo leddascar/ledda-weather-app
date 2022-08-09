@@ -118,6 +118,9 @@ function showGPSTemperature(response) {
 function displayCelsius(event) {
   event.preventDefault();
   document.querySelector("#temper").innerHTML = Math.round(celsiusTemperature);
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 function displayFahrenheit(event) {
@@ -125,6 +128,8 @@ function displayFahrenheit(event) {
   document.querySelector("#temper").innerHTML = Math.round(
     celsiusTemperature * 1.8 + 32
   );
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 let celsiusTemperature = null;

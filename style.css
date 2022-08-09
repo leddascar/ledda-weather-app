@@ -9,10 +9,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: #70757a;
+  cursor: default;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #70757a;
 }
+
 p {
   margin-left: 250px;
 }
@@ -41,6 +45,10 @@ li:first-letter {
 img {
   vertical-align: bottom;
 }
+.active {
+  color: rgb(33, 33, 33);
+}
+
 .city {
   font-weight: bold;
 }
@@ -131,14 +139,13 @@ img {
   position: relative;
   top: -4px;
   font-size: 14px;
-  color: rgb(80, 80, 80);
+
   font-weight: normal;
 }
 .unit {
   position: relative;
   top: -35px;
   font-size: 20px;
-  color: rgb(33, 33, 33);
 }
 
 .un {
