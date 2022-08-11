@@ -90,10 +90,6 @@ img {
   margin-right: 5px;
 }
 
-.day {
-  color: rgb(80, 80, 80);
-  font-size: 18px;
-}
 .futur {
   font-size: 20px;
   font-weight: bold;
@@ -180,4 +176,15 @@ img {
 }
 .code {
   color: #176ff2;
+}
+.wheather-forecast-temperature {
+  color: #000;
+  font-size: 20px;
+}
+.day {
+  font-size: 18px;
+  opacity: 0.5;
+}
+.wheather-forecast-temperature-min {
+  opacity: 0.5;
 }
