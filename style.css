@@ -178,3 +178,6 @@ img {
 .description:first-letter {
   text-transform: uppercase;
 }
+.code {
+  color: #176ff2;
+}
