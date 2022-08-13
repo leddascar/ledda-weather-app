@@ -9,12 +9,11 @@ ul {
 
 a {
   text-decoration: none;
-  color: #70757a;
+
   cursor: default;
 }
 a:hover {
   text-decoration: none;
-  color: #70757a;
 }
 
 p {
@@ -91,7 +90,7 @@ img {
 }
 
 .futur {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -134,7 +133,7 @@ img {
 .units {
   position: relative;
   top: -4px;
-  font-size: 14px;
+  font-size: 20px;
 
   font-weight: normal;
 }
@@ -147,7 +146,7 @@ img {
 .un {
   color: rgb(80, 80, 80);
   font-weight: normal;
-  font-size: 15px;
+  font-size: 20px;
 }
 .precipitation {
   font-size: 30px;
@@ -179,11 +178,12 @@ img {
 }
 .wheather-forecast-temperature {
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
 }
 .day {
   font-size: 18px;
-  opacity: 0.5;
+  font-weight: normal;
+  color: rgb(80, 80, 80);
 }
 .wheather-forecast-temperature-min {
   opacity: 0.5;

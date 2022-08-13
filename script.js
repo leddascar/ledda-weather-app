@@ -42,9 +42,41 @@ function showTime(timestemp) {
   return ` <br/>Last updated: ${weekday}, ${hours}:${minutes} <br/>  ${month} ${dayNum}, ${year}`;
 }
 
-//let currentDate = document.querySelector("#time");
-//let currentTime = new Date();
-//currentDate.innerHTML = showTime(currentTime);
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tuesday", "Wednesday", "Thirsday", "Friday", "Saturday"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  
+            <div class="col-6 futur">
+              <ul>
+                <li>
+                    <div class="wheather-forecast-temperature">
+                      <span class="wheather-forecast-temperature-max" id="tempmax"> 18°  </span> <span class="wheather-forecast-temperature-min" id="tempmin">12°</span>
+                      
+                    </div>
+                </li>
+                <li>
+                    <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
+                </li>
+                <li>
+                  <span class="forwind" id="forwind">1</span><span class="un"> km/h</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <img src="" alt=""  id="iconfor"width="42"/> 
+            </div>
+            <div class="col-2" > <span class="day">${day}</span></div>
+          `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function searchCity(event) {
   event.preventDefault();
@@ -118,7 +150,6 @@ function showGPSTemperature(response) {
 function displayCelsius(event) {
   event.preventDefault();
   document.querySelector("#temper").innerHTML = Math.round(celsiusTemperature);
-
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
@@ -141,3 +172,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 let currentCity = "Kyiv";
 showWeather(currentCity);
+displayForecast();
