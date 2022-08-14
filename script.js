@@ -1,6 +1,6 @@
 function showTime(timestemp) {
   let date = new Date(timestemp);
-  console.log(date);
+
   let hours = date.getHours();
   let dayNum = date.getDate();
   let year = date.getFullYear();
@@ -42,38 +42,57 @@ function showTime(timestemp) {
   return ` <br/>Last updated: ${weekday}, ${hours}:${minutes} <br/>  ${month} ${dayNum}, ${year}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thi", "Fri", "Sat"];
+  return days[day];
+}
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thi", "Fri", "Sat"];
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
   
             <div class="col-6 futur">
               <ul>
                 <li>
                     <div class="wheather-forecast-temperature">
-                      <span class="wheather-forecast-temperature-max" id="tempmax"> 18°  </span> <span class="wheather-forecast-temperature-min" id="tempmin">12°</span>
+                      <span class="wheather-forecast-temperature-max" id="tempmax">${Math.round(
+                        forecastDay.temp.max
+                      )}</span> <span class="wheather-forecast-temperature-min" id="tempmin">${Math.round(
+          forecastDay.temp.min
+        )}</span>
                       
                     </div>
                 </li>
                 <li>
-                    <span class="forprecip" id="forprecip">10</span><span class="un"> %</span>
+                    <span class="forprecip" id="forprecip">${
+                      forecastDay.humidity
+                    }</span><span class="un"> %</span>
                 </li>
                 <li>
-                  <span class="forwind" id="forwind">1</span><span class="un"> km/h</span>
+                  <span class="forwind" id="forwind">${Math.round(
+                    forecastDay.wind_speed
+                  )}</span><span class="un"> km/h</span>
                 </li>
               </ul>
             </div>
             <div class="col-4">
-              <img src="" alt=""  id="iconfor"width="42"/> 
+              <img src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" alt=""  id="iconfor"width="42"/> 
             </div>
-            <div class="col-2 day">${day}</div>
+            <div class="col-2 day">${formatDay(forecastDay.dt)}</div>
           `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
