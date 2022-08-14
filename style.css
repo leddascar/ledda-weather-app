@@ -102,10 +102,11 @@ img {
 }
 .frame {
   background: #9fc5f3;
-  border: 1px solid #287ce2;
+  border: 2px solid #287ce2;
   border-radius: 5px;
   text-align: left;
   max-width: 800px;
+  padding: 20px;
 }
 
 .temp {
@@ -185,6 +186,7 @@ img {
   font-weight: normal;
   color: rgb(80, 80, 80);
 }
+
 .wheather-forecast-temperature-min {
   opacity: 0.5;
 }
