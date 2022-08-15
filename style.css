@@ -44,9 +44,6 @@ li:first-letter {
 img {
   vertical-align: bottom;
 }
-.active {
-  color: rgb(33, 33, 33);
-}
 
 .city {
   font-weight: bold;
